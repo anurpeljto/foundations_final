@@ -15,6 +15,7 @@ function operate(number, number2, operation){
             return subTwo(number, number2);
         case divTwo:
             return divTwo(number, number2);
-        case mulTwo(number, number2);
-    }
-}
+        case mulTwo(number, number2):
+            return mulTwo(number, number2);
+        }
+ }
