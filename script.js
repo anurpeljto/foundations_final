@@ -19,3 +19,5 @@ function operate(number, number2, operation){
             return mulTwo(number, number2);
         }
  }
+
+ const 

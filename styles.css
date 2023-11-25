@@ -47,10 +47,10 @@ body {
 .digits {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     margin-left: 10px;
     margin-right: 10px;
     gap: 5px;
+    padding: 0;
 }
 
 .number {
@@ -68,36 +68,51 @@ body {
 }
 
 .operation_buttons {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 0;
+    gap: 10px;
     padding-bottom: 10px;
 }
 
-.add {
+ .add {
     flex: 1;
-    height: 30px;
-    width: 50px;
+    padding: 0;
+    margin-left: 10px;
 }
 
 .sub{
     flex: 1;
-    height: 30px;
-    width: 50px;
-}
+    padding: 0;
+    margin-right: 10px;
+} 
 
 .multiply {
     flex: 1;
-    height: 30px;
-    width: 50px;
+    background-color: pink;
 }
 
 .divide {
     flex: 1;
-    height: 30px;
-    width: 50px;
+    background-color: pink;
+}
+
+.clear {
+    flex: 1;
+    background-color: pink;
+}
+
+.col_operations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap:10px;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap:5px;
 }
