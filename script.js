@@ -19,5 +19,20 @@ function operate(number, number2, operation){
             return mulTwo(number, number2);
         }
  }
+ const result = document.querySelector(".display_results");
+ const dig1 = document.querySelector("#one");
 
- const 
+ dig1.addEventListener("click", () => {
+    if(result.textContent == "Result will be listed here"){
+        result.textContent = "1";
+    }
+    else {
+        result.textContent += "1";
+    }
+ });
+
+ const clear = document.querySelector(".clear");
+clear.addEventListener("click", () => {
+    result.textContent = "";
+
+});
