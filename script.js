@@ -50,8 +50,47 @@ function operate(number, number2, operation){
 
 
  equals.addEventListener("click", () => {
-    
+    let numbers = result.textContent.split('');
+    let numbersToInt = numbers.map(Number);
+    console.log(numbersToInt); // map numbers array into another array by digit so that we could later split that array into two parts separated by operator
+    let firstNumber = [];
+    let secondNumber = [];
 
+    let i = 0;
+    let counter = 0;
+    while(Number.isInteger(numbersToInt[i])){
+        firstNumber.push(numbersToInt[i]);
+        i++;
+        counter++;
+    }
+    firstNumber = Number(firstNumber.join(""));
+
+    let secondCounter = 0;
+    while(!Number.isInteger(numbersToInt[counter+secondCounter])){
+        secondCounter++;
+    }
+
+    let endOperator = counter + secondCounter;
+
+    let operator = numbers[counter];     // getting the operator from numbers array using counter
+    counter++; // so that the counter moves from the "NaN" element on to the next number
+
+    while(counter < numbersToInt.length){
+        secondNumber.push(numbersToInt[counter]);
+        counter++;
+    }
+    secondNumber = Number(secondNumber.join(""));
+    
+    switch(operator){
+        case("+"):
+        result.textContent = addTwo(firstNumber, secondNumber);
+        case("-"):
+        result.textContent = subTwo(firstNumber, secondNumber);
+        case("/"):
+        result.textContent = divTwo(firstNumber, secondNumber);
+        case("*"):
+        result.textContent = mulTwo(firstNumber, secondNumber);
+    }
  });
 
  const clear = document.querySelector(".clear");
