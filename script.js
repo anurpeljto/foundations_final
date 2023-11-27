@@ -21,9 +21,14 @@ function operate(number, number2, operation){
  }
  const result = document.querySelector(".display_results");
  const dig1 = document.querySelector("#one");
+ const equals = document.querySelector(".equals");
+ const add = document.querySelector(".add");
+ const sub = document.querySelector(".sub");
+ const mult = document.querySelector(".multiply");
+ const div = document.querySelector(".divide");
 
  dig1.addEventListener("click", () => {
-    if(result.textContent == "Result will be listed here"){
+    if(result.textContent == "Result will be listed here" || result.textContent == ""){
         result.textContent = "1";
     }
     else {
@@ -31,8 +36,29 @@ function operate(number, number2, operation){
     }
  });
 
+
+
+ add.addEventListener("click", () => {
+    result.textContent += "+";
+ });
+
+ sub.addEventListener("click", () => result.textContent += "-");
+ mult.addEventListener("click", () => result.textContent += "*");
+ div.addEventListener("click", () => result.textContent += "/");
+
+
+
+
+ equals.addEventListener("click", () => {
+    
+
+ });
+
  const clear = document.querySelector(".clear");
 clear.addEventListener("click", () => {
     result.textContent = "";
 
 });
+
+
+
